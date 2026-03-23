@@ -2,16 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Navbar Example</title>
+    <style>
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .price {
+      color: green;
+      font-weight: bold;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      background: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
+    <img src="cart_shopmate.png" width="50" height="50">
     <a class="navbar-brand" href="#">ShopMate</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -49,6 +79,18 @@
     </div>
   </div>
 </nav>
+<div class="container mt-3" style="display: flex; justify-content: center;">
+  <h1>Welcome to ShopMate!</h1>
+</div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Navbar Example</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
 <div class="modal fade" id="aiModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -73,8 +115,50 @@
   </div>
 </div>
 <br><br>
-<div class="container mt-3">
+<div class="container mt-3" style="display: flex; justify-content: center;">
 <h1>This is the home page. [WORK IN PROGRESS]</h1>
+</div>
+<div class="products">
+  <div class="card" style="display:flex; justify-content: center; align-items: center;">
+    <img src="headphones.jpg" style="width:300px; height:400px; object-fit: cover;">
+    <h3>Bluetooth headphones</h3>
+    <p class="price">$1790.99</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card" style="display:flex; justify-content: center; align-items: center;">
+    <img src="product2.jpg">
+    <h3>Product 2</h3>
+    <p class="price">$29.99</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card"  style="display:flex; justify-content: center; align-items: center;">
+    <img src="cart_shopmate.png" style="width:400px; height:400px; object-fit: cover;">
+    <h3>Product 3</h3>
+    <p class="price">$39.99</p>
+    <button class="btn">Buy</button>
+  </div>
+    <div class="card" style="display:flex; justify-content: center; align-items: center;">
+    <img src="headphones.jpg" style="width:300px; height:400px; object-fit: cover;">
+    <h3>Bluetooth headphones</h3>
+    <p class="price">$190000.00</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card" style="display:flex; justify-content: center; align-items: center;">
+    <img src="product2.jpg">
+    <h3>Product 2</h3>
+    <p class="price">$47.88</p>
+    <button class="btn">Buy</button>
+  </div>
+
+  <div class="card"  style="display:flex; justify-content: center; align-items: center;">
+    <img src="cart_shopmate.png" style="width:400px; height:400px; object-fit: cover;">
+    <h3>Product 3</h3>
+    <p class="price">$1568.43</p>
+    <button class="btn">Buy</button>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
