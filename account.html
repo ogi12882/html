@@ -2,17 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ShopMate Account</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShopMate Account</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #b12704;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            background: #ffd814;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+            .btn:hover {
+                background: #f7ca00;
+            }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <img src="cart_shopmate.png" width="50" height="50">
     <a class="navbar-brand" href="#">ShopMate</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,7 +101,7 @@
           <a class="btn btn-outline-light me-2" href="cart.html">Cart</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-light me-2 active" href="account.html">Account</a>
+          <a class="btn btn-outline-light me-2" href="account.html">Account</a>
         </li>
       </ul>
     </div>
@@ -47,13 +110,12 @@
 
 <div class="container mt-5">
   <h2>Welcome, AA AA!</h2>
-  <p>Here's your account dashboard.</p>
 
   <div class="card mb-4" style="max-width: 500px;">
     <div class="card-body">
       <img src="account_icon.jpg" height="100" width="100">
       <h5 class="card-title">Profile Information</h5>
-      <p class="card-text"><strong>Email:</strong> shakespeareintheflesh@waltdisney.com</p>
+      <p class="card-text"><strong>Email:</strong>gmail@jevtic.marko.com</p>
       <p class="card-text"><strong>Member since:</strong> Jan 1589</p>
       <a href="#" class="btn btn-primary">Edit Profile</a>
     </div>

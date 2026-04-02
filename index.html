@@ -2,46 +2,85 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Navbar Example</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 20px;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+        }
 
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+        .card {
+            background: white;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
 
-    .price {
-      color: green;
-      font-weight: bold;
-    }
+        .card:hover {
+            transform: scale(1.03);
+        }
 
-    .btn {
-      margin-top: 10px;
-      padding: 10px;
-      border: none;
-      background: black;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #b12704;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            background: #ffd814;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+            .btn:hover {
+                background: #f7ca00;
+            }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <img src="cart_shopmate.png" width="50" height="50">
     <a class="navbar-brand" href="#">ShopMate</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -79,18 +118,6 @@
     </div>
   </div>
 </nav>
-<div class="container mt-3" style="display: flex; justify-content: center;">
-  <h1>Welcome to ShopMate!</h1>
-</div>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap Navbar Example</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-
 <div class="modal fade" id="aiModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -115,50 +142,40 @@
   </div>
 </div>
 <br><br>
-<div class="container mt-3" style="display: flex; justify-content: center;">
-<h1>This is the home page. [WORK IN PROGRESS]</h1>
+
+<div class="container">
+
+ <div class="card">
+    <img src="headphones.png" alt="Product">
+        <div class="card-content">
+            <div class="title">Bluetooth Headphones</div>
+            <div class="price">$55.00</div>
+            <div class="btn">Add to Cart</div>
+        </div>
 </div>
-<div class="products">
-  <div class="card" style="display:flex; justify-content: center; align-items: center;">
-    <img src="headphones.jpg" style="width:300px; height:400px; object-fit: cover;">
-    <h3>Bluetooth headphones</h3>
-    <p class="price">$1790.99</p>
-    <button class="btn">Buy</button>
-  </div>
 
-  <div class="card" style="display:flex; justify-content: center; align-items: center;">
-    <img src="product2.jpg">
-    <h3>Product 2</h3>
-    <p class="price">$29.99</p>
-    <button class="btn">Buy</button>
-  </div>
+                
+<div class="card">
+    <img src="keyboard.jpg" alt="Product">
+        <div class="card-content">
+            <div class="title">Gaming Keyboard</div>
+            <div class="price">$49.99</div>
+            <div class="btn">Add to Cart</div>
+        </div>
+</div>
 
-  <div class="card"  style="display:flex; justify-content: center; align-items: center;">
-    <img src="cart_shopmate.png" style="width:400px; height:400px; object-fit: cover;">
-    <h3>Product 3</h3>
-    <p class="price">$39.99</p>
-    <button class="btn">Buy</button>
-  </div>
-    <div class="card" style="display:flex; justify-content: center; align-items: center;">
-    <img src="headphones.jpg" style="width:300px; height:400px; object-fit: cover;">
-    <h3>Bluetooth headphones</h3>
-    <p class="price">$190000.00</p>
-    <button class="btn">Buy</button>
-  </div>
+                
+<div class="card">
+    <img src="4070ti.jpg" alt="Product">
+        <div class="card-content">
+            <div class="title">ROG STRIX RTX 4070 TI 12GB GDDR6X</div>
+            <div class="price">$700.00</div>
+            <div class="btn">Add to Cart</div>
+        </div>
+</div>
 
-  <div class="card" style="display:flex; justify-content: center; align-items: center;">
-    <img src="product2.jpg">
-    <h3>Product 2</h3>
-    <p class="price">$47.88</p>
-    <button class="btn">Buy</button>
-  </div>
+</div>
 
-  <div class="card"  style="display:flex; justify-content: center; align-items: center;">
-    <img src="cart_shopmate.png" style="width:400px; height:400px; object-fit: cover;">
-    <h3>Product 3</h3>
-    <p class="price">$1568.43</p>
-    <button class="btn">Buy</button>
-  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
